@@ -1,0 +1,24 @@
+sub verse(n) {
+    my s = "s";
+    if n == 1 {
+        s = "";
+    }
+    my s1 = "s";
+    if n - 1 == 1 {
+        s1 = "";
+    }
+    say(str(n) ~ " bottle"~s ~ " of beer on the wall,");
+    say(str(n) ~ " bottle"~s ~ " of beer.");
+    say("Take one down, pass it around,");
+    say(str(n - 1) ~ " bottle"~s1 ~ " of beer on the wall...");
+}
+
+my n = 99;
+while n != 0 {
+    verse(n);
+    if n != 1 {
+        say("");
+    }
+
+    n = n - 1;
+}
