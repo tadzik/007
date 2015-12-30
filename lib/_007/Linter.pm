@@ -56,7 +56,6 @@ class _007::Linter {
 
             multi traverse(Q::Block $block) {
                 @blocks.push: $block;
-                traverse($block.parameterlist);
                 traverse($block.statementlist);
                 @blocks.pop;
             }
