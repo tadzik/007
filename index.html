@@ -98,8 +98,7 @@ None                Q::Literal::None
 <pre><code>name = &quot;Bond&quot;       Q::Infix::Assignment
 42 == 40 + 2        Q::Infix::Eq</code></pre>
 <p>There is no boolean type; comparison yields <code>1</code> and <code>0</code>. Comparison is strict, in the sense that <code>7</code> and <code>&quot;7&quot;</code> are not considered equal under <code>==</code>, and an array is never equal to an int, not even the length of the array.</p>
-<p>The only thing that can be assigned to is variables. Arrays are immutable values, and you can't assign to <code>ar[3]</code>, for example.</p>
-<pre><code>ar[3] = &quot;hammer&quot;;   # error; can&#39;t touch this</code></pre>
+<p>You can assign to individual variables, like <code>name</code>, or long strings of postfix operators, like <code>employee[n - 1].boss.name</code>. There's no autovivification like in Perl — in the previous example, <code>employee[n - 1].boss</code> needs to already exist (though its <code>.name</code> property doesn't need to exist).</p>
 <p>Operands don't need to be simple values. Arbitrarily large expressions can be built. Parentheses can be used to explicitly show evaluation order.</p>
 <pre><code>10 + -(2 + int(&quot;3&quot; ~ &quot;4&quot;))</code></pre>
 <h2 id="variables">Variables</h2>
